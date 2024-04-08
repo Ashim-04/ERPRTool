@@ -33,17 +33,9 @@ class ProductPerformance(DataProcess):
     def process_data(self, data):
         return data.groupby('Product')[['Sales', 'Profit']].sum().reset_index()
 
-class SegmentAnalysis(DataProcess):
-    def process_data(self, data):
-        return data.groupby('Segment')['Sales'].sum().reset_index()
-
 class DiscountImpactOnSales(DataProcess):
     def process_data(self, data):
         return data[['Discount Band', 'Sales', 'Profit']]
-
-class ManufacturingVsSalePrice(DataProcess):
-    def process_data(self, data):
-        return data[['Manufacturing Price', 'Sale Price']]
 
 class MonthlySalesDistribution(DataProcess):
     def process_data(self, data):

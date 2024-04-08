@@ -5,7 +5,7 @@ import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output, State
 from DataIngestion import DataIngestionContext, CSVDataIngestion
-from DataProcessingApplication import DataProcessingContext, SalesTrendsOverTime, ProfitAnalysisByCountry, ProductPerformance, DiscountImpactOnSales, ManufacturingVsSalePrice, CountryWiseSalesDistribution, CorrelationAnalysis
+from DataProcessingApplication import DataProcessingContext, SalesTrendsOverTime, ProfitAnalysisByCountry, ProductPerformance, DiscountImpactOnSales, CountryWiseSalesDistribution, CorrelationAnalysis
 
 # Load and process data
 data_ingestion_context = DataIngestionContext(CSVDataIngestion())
